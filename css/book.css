@@ -1,0 +1,540 @@
+html *
+{
+   font-size: 13pt;
+   color: #000 !important;
+   font-family: "Charter";
+}
+
+body{
+    max-height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+
+@font-face {
+    font-family: "Charter";
+    src: url("/font/charter/webfonts/charter_regular-webfont.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Charter";
+    src: url("/font/charter/webfonts/charter_italic-webfont.ttf");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Charter";
+    src: url("/font/charter/webfonts/charter_bold-webfont.ttf");
+    font-weight: bold;
+    font-style: italic;
+}
+
+/*BOOK TYPOGRAPHY*/
+
+p { 
+    font-size: 1em;
+    text-align: justify;
+    line-height: 1.3em;
+    margin-bottom: -1em;
+}
+
+a{
+	text-decoration: none;
+}
+
+#text p {
+    text-indent: 1em;
+    font-size:1.85vh;
+    line-height: 1.5em;
+}
+
+h1 {
+    font-size: 3.3vh;
+    font-style: italic;
+    text-align: center;
+    font-weight: 100;
+    line-height: 5em;
+}
+
+.title {
+    font-size: 4vh;
+    font-style: normal;
+    font-weight: bold;
+    margin-bottom: 100%;
+}
+
+h2 { 
+    font-size: 1.8vh;
+    font-weight: 200;
+    text-align: center;
+    letter-spacing: .15em;
+}
+
+h3 {
+    font-size: 1.8vh;
+    font-style: italic;
+    font-weight: normal;
+    text-align: justify;
+    line-height: 1.5em;
+}
+
+.italics {
+    font-size: 1em;
+    font-style: italic;
+}
+
+.x-out {
+    font-size: 1.3vh;
+}
+
+.subtitle {
+    font-size: 1.1vh;
+    text-align: center;
+    letter-spacing: .1em;
+    line-height: 1.4em;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.subtitle2 {
+    font-size: 1.1vh;
+    text-align: center;
+    letter-spacing: .1em;
+    line-height: 1.2em;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.anot {
+    font-size:1.85vh;
+    line-height: 1.4em;
+}
+.seeAnot {
+    /*
+    outline: .2em solid;
+    */    
+    outline-color: #fceaec;
+    background-color: #fceaec;
+
+    display: block;
+}
+.anot2 {
+}
+
+.seeAnot2 {
+    background-color: black;
+}
+
+.anot3 {
+    display:none;
+}
+
+.seeAnot3 {
+    position: absolute;
+    display: inline-flex;
+    text-align: right;
+    opacity: 50%;
+    left: 88%;
+}
+
+.seeAnot3:hover {
+    opacity: 100%;
+}
+
+.story {
+}
+
+
+/*BOOK*/
+
+#bookWrap {
+    border:3px solid #ccc;
+    position: fixed;  
+    top:10%;
+    left: 8%;
+    height:80%;
+    width:33%;
+    cursor: ns-resize;
+
+}
+#textBox {
+    position: absolute;  
+    top:10%;
+    left:2%;
+    height:80%;
+    width:97%;
+    background-color: white;
+    overflow-y: scroll;
+}
+#text {
+    margin: 0% 10%;
+    font-size: 100%;
+    height:88%;
+}
+#title {
+    top: 10%;
+    left: 42%;
+    position: fixed;
+}
+
+
+/*STORIES*/
+
+#storyBox {
+    top: 10%;
+    left: 50%;
+    height:82%;
+    width:43%;
+    border:none;
+    position: fixed;
+    padding: 10px;
+    display: none;
+}
+#stories {
+    position: absolute;  
+    top:0%;
+    left:2%;
+    height:95%;
+    width:97%;
+    background-color: white;
+    overflow-y: scroll;
+}
+
+/*LIBRARY*/
+
+#libBox {
+    top: 10%;
+    left: 50%;
+    height:82%;
+    width:33%;
+    border:none;
+    position: fixed;
+    padding: 1% 2% 0% -2%;
+    display: none;
+}
+#library {
+    position: absolute;  
+    top:0%;
+    left:2%;
+    height:95%;
+    width:97%;
+    background-color: white;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+#library a {
+    cursor: e-resize;
+}
+.object {
+    padding:20% 2% 20% 0%;
+}
+
+.object p {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5vh;
+    color: #838282!important;
+    line-height: 1.2em;
+}
+.object-info {
+    font-style: italic;
+    font-size: 1.3vh;
+    opacity: 60%;
+}
+.object-link a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3vh;
+    line-height: 2.5em;
+    opacity: 50%;
+}
+.object-link a:hover {
+    color: black!important;
+    transition: 15ms ease;
+}
+
+
+#download {
+    top: 84%;
+    left: 41.7%;
+    position: fixed;
+    white-space: nowrap;
+}
+#dlink{
+    font-size: 1.2em;
+    line-height: 1em;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    color: black;
+    opacity: 10%;
+    writing-mode: vertical-lr;    
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#dlink:hover {
+    opacity: 40%;
+    transition: 15ms ease;
+}
+side{
+    font-size: 1.2em;
+    line-height: .5em;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    color: black;
+    opacity: 10%;
+    writing-mode: vertical-rl;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: fixed;
+}
+
+
+/*WORK*/
+
+.nav {
+    display: none;
+}
+#workBox {
+    top: 10%;
+    left: 50%;
+    height:82%;
+    width:33%;
+    border:none;
+    position: fixed;
+    padding: 1% 2% 0% -2%;
+    display: none;
+}
+#work {
+    position: absolute;  
+    top:0%;
+    left:2%;
+    height:95%;
+    width:97%;
+    background-color: white;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.diary {
+    padding:20% 2% 20% 0%;
+}
+.diary p {
+    text-align: left;
+    padding-left: 10%;
+}
+.diary a {
+    cursor: e-resize;
+}
+.note {
+    list-style-type: none;
+    padding-top: 3%;
+    padding-left: 4%;
+    width: 60%;
+}
+.note p {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3vh;
+    font-weight: 200;
+    color: #838282!important;
+    line-height: 1.5em;
+    padding-top: 3%;
+}
+
+.boxMenu {
+    position: fixed;
+    margin-top: 0;
+    padding: 0;
+    list-style-type: none;
+    background: transparent;
+    z-index: 99;
+    line-height: 0em;
+}
+.boxMenu a {
+    font-variant: small-caps;
+    font-size: 1em;
+    color: black;
+    font-weight: 100;
+    font-family: 'Oswald', sans-serif;
+    padding: 14px 16px;
+}
+#libMenu a {
+    font-size: .7em;
+    padding: 17px 10px;
+}
+.boxMenu li {
+    float: left;
+}
+.boxMenu li a {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+/*MENU*/
+
+#menu {
+    top: 12%;
+    right:92.5%;
+    position: fixed;
+    display: none;
+    }
+#menu a {
+    cursor: crosshair;
+}
+#chaps {
+    padding:0;
+    list-style-type: none;
+    line-height: 1em;
+    text-align: right;
+    }
+#menuBut{
+    position: fixed;
+    top: 10%;
+    right: 92%;
+    width: 5%;
+    margin-bottom: 5%;
+    font-size: 1em;
+    font-weight: 200;
+    font-family: 'Oswald', sans-serif;
+    text-align: right;
+    border: none;
+    color: lightgray;
+    background-color: white;
+    opacity: 15%;
+    cursor: w-resize;
+}
+#menu li a {
+    font-size: .7em;
+    font-weight: 100;
+    font-family: 'Oswald', sans-serif;
+}
+li:hover {
+    outline: .1em solid;
+    outline-color: lightgray;
+}
+
+/*BUTTONS*/
+
+.but {
+    font-size: 1em;
+    line-height: 1em;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    color: black;
+    opacity: 15%;
+    top: 91%;
+    position: absolute;
+    white-space: nowrap;
+    cursor: pointer;
+    border:none;
+    transition: 15ms ease;
+}
+.but:hover {
+    opacity: 50%;
+    transition: 15ms ease;
+}
+.butSel {
+    opacity: 50%!important;
+}
+#chapBut {
+    right: 68%;
+}
+#anotBut {
+    right: 59%;
+}
+#libBut {
+    left: 50%;
+}
+#workBut {
+    left: 55.5%;
+}
+#storyBut {
+    left: 60%;
+}
+#wmenuBut {
+    position: fixed;
+    top: 10%;
+    right: 50%;
+    width: 5%;
+    background-color: none;
+    font-size: 1em;
+    font-weight: 200;
+    font-family: 'Oswald', sans-serif;
+    text-align: right;
+    border: none;
+    color: lightgray;
+    background-color: white;
+    opacity: 15%;
+    cursor: e-resize;
+    display: none;
+}
+#lmenuBut {
+    position: fixed;
+    top: 10%;
+    right: 50%;
+    width: 5%;
+    background-color: none;
+    font-size: 1em;
+    font-weight: 200;
+    font-family: 'Oswald', sans-serif;
+    text-align: right;
+    border: none;
+    color: lightgray;
+    background-color: white;
+    opacity: 15%;
+    cursor: e-resize;
+    display: none;
+}
+
+/*MEDIA*/
+
+img {
+    width: 100%;
+}
+#library img {
+    margin-top:40%;
+}
+.slideBox {
+    margin:40% 0% 50% 0%;
+}
+.slide  {
+    width: 47.4%;
+    padding: 0% 1% 0% 1.2%;
+    position: relative;
+    margin-bottom: 3%;
+}
+.slideBig {
+    margin-bottom: 3%;
+}
+.single {
+    width: 100%;
+    margin: 30% 0% 50% 0%;
+}
+.workVid {
+    margin:40% 0%;
+    width: 100%;
+}
+.workVid2 {
+    margin:-40%;
+    -moz-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+    -o-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    transform:scale(.4)rotate(270deg);
+}
+.workVid::-webkit-media-controls-volume-slider {
+display:none;
+}
+
+.workVid::-webkit-media-controls-mute-button {
+display:none;
+}
