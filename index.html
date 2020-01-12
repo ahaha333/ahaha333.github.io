@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>tsoagl</title>
     
-    <link rel="stylesheet" type="text/css" href="/css/book.css">
+    <link rel="stylesheet" type="text/css" href="/css/book2.css">
     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald:200,400&display=swap" rel="stylesheet">
 
@@ -13,53 +13,96 @@
     <script src="/script/jquery.zoom.js"></script>
     
 </head>
-        <body> 
-        
-        <button id="menuBut">&#11152;</button>
-        <button id="wmenuBut">&#11153;</button>
-        <button id="lmenuBut">&#11153;</button> 
-
-        <div id="menu" data-include="menu">
-        </div>
-        
-        <div id="bookWrap">
-            <div id="textBox">
-                <div id="text" data-include="annotated"></div>
-            </div>  
-        </div> 
-            
-        <div id="storyBox">
-            <div id="stories" data-include="stories"></div>
-        </div>
-            
-        <div id="libBox">
-            <div id="library" data-include="library"></div>     
-        </div>
-            
-        <div id="workBox">
-            <div id="work" data-include="work"></div>     
-        </div>    
-            
-        <div id="title">
-            <side>LOBAGOLA</side>
-        </div>
-            
-        <div id="download">
-            <a href="doc/LoBagola.epub" id="dlink" target="_blank">➩ EPUB</a>
-            <a href="/doc/LoBagola.pdf" id="dlink" target="_blank">➩ PDF</a>     
-        </div>
-            
-            <div id="buttons">
-                <button class="but" id="chapBut">contents</button>
-                <button class="but" id="anotBut" >annotations</button>
-            </div>
-            <div id="buttons2">    
-                <button class="but" id="libBut">library</button>
-                <button class="but" id="workBut">work</button> 
-                <button class="but" id="storyBut">stories</button>               
-            </div>
-            
-
-        </body>
-</html>    
     
+<body> 
+
+    <button id="menuBut">&#11152;</button>
+    <button id="wmenuBut">&#11153;</button>
+    <!-- <button id="lmenuBut">&#11153;</button> -->
+
+    <div id="menu" data-include="menu"></div>
+    
+    <div id="bookWrap">
+        <div id="textBox">
+            <div id="text" data-include="annotated"></div>
+        </div>  
+    </div> 
+
+    <div id="storyBox">
+        <div id="stories" data-include="stories"></div>
+    </div>
+
+    <div id="libBox">
+        <!-- <div id="library" data-include="library"></div> --> 
+        <div id="library">
+            
+        <ul class="boxMenu" id="libMenu">
+            <li class="nav"><a href="#1">>1900</a></li>
+            <li class="nav"><a href="#2">1901-20</a></li>
+            <li class="nav"><a href="#3">1921-40</a></li>
+            <li class="nav"><a href="#4">1941-60</a></li>
+            <li class="nav"><a href="#5">1961-80</a></li>
+            <li class="nav"><a href="#6">1981-2000</a></li>
+            <li class="nav"><a href="#7">2001-20</a></li>
+        </ul>
+
+        <div class="objBox">
+
+            <img src="lib/rutland.jpg" class="object" id="rutland">
+            <img src="lib/psalmanaazaar.jpg" class="object" id="psalmanaazaar">
+            <img src="lib/equiano.jpg" class="object" id="equiano">
+            <img src="lib/park.jpg" class="object" id="park">
+
+            <img src="lib/henson.jpg" class="object" id="henson">
+            <img src="lib/law.jpg" class="object" id="houklaw">
+            <img src="lib/maran.jpg" class="object" id="maran">
+            <img src="lib/hinkle.jpg" class="object" id="hinkle">   
+            <img src="lib/londres.jpg" class="object" id="londres">
+            <img src="lib/tomorrow.jpeg" class="object" id="hurston">
+            <img src="lib/dunbar.png" class="object" id="dunbar">
+            <img src="lib/HurstonM.jpg" class="object" id="hurston2">
+            <img src="lib/Herskovits.jpg" class="object" id="herskovits">
+            <img src="lib/olney.png" class="object" id="olney">
+            <img src="lib/Gates.jpg" class="object" id="gates">
+            <img src="lib/pettinger.jpeg" class="object" id="pettinger">
+            <img src="lib/Lindfors.jpg" class="object" id="lindfors">
+            <img src="lib/brooks.jpg" class="object" id="brooks">
+            <img src="lib/hutchinson.jpg" class="object" id="hutchinson">
+            <img src="lib/chude-sokei.jpeg" class="object" id="chude-sokei">
+            <img src="lib/painter.jpeg" class="object" id="painter">
+            <img src="lib/Parfitt.jpg" class="object" id="parfitt">
+            <img src="lib/Costello.jpg" class="object" id="costello">
+
+        </div>
+        
+        <div class="libtext" id="libtext"></div>
+                    
+        </div>
+    </div>    
+
+    <div id="workBox">
+        <div id="work" data-include="work"></div>     
+    </div>    
+
+    <div id="title">
+        <side>LOBAGOLA</side>
+    </div>
+
+    <div id="download">
+        <a href="doc/LoBagola.epub" id="dlink" target="_blank">➩ EPUB</a>
+        <a href="/doc/LoBagola.pdf" id="dlink" target="_blank">➩ PDF</a>     
+    </div>
+
+        <div id="buttons">
+            <button class="but" id="chapBut">contents</button>
+            <button class="but" id="anotBut" >annotations</button>
+        </div>
+        <div id="buttons2">    
+            <button class="but" id="libBut">library</button>
+            <button class="but" id="workBut">work</button>
+            <button class="but" id="storyBut">stories</button>               
+        </div>
+
+
+    </body>
+</html>    

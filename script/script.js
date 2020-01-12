@@ -72,13 +72,28 @@ $(document).ready(function(){
         $("#wmenuBut").toggleClass("butSel");
         });
     
+    /**
     $("#lmenuBut").click(function(){
         $("#libMenu li").toggle();
         $("#lmenuBut").toggleClass("butSel");
         });
-
+    */    
     
-
+    /**
+    
+    Function for object click:
+    Get "id" of this button
+    Load "id".txt from lobacor folder into #libtext
+    Add class "objSel" to clicked img
+    
+    */
+    
+    $(".object").click(function(){
+        var id = $(this).attr('id');
+        $("#libtext").load("lib/text/" + id + ".txt");
+        $(this).addClass("objSel");
+        $(".object").not(this).removeClass("objSel");
+    });
     
     
     $(document).ready(function(){
